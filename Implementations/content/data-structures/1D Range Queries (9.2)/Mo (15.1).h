@@ -11,7 +11,7 @@ vector<array<int,3>> todo; // store left, right, index of ans
 
 bool cmp(array<int,3> a, array<int,3> b) { // sort queries
 	if (a[0]/BLOCK != b[0]/BLOCK) return a[0] < b[0];
-	return a[1] < b[1];
+	return (a[0]/BLOCK)%2?a[1] < b[1]:a[1] > b[1];
 }
 
 int l = 0, r = -1, cans = 0;
